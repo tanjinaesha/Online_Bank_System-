@@ -1,0 +1,198 @@
+{% include "header.html"%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="static/style.css" >
+  </head>
+
+  <body style="background: url('static/bank.jpg') ;   background-repeat: no-repeat;
+  background-size: cover;">
+
+    {% block content %}
+
+  
+    <h1 style="padding-top: 200px;color: black;font-size: 70px;"><center>This is our  <font style="color: gray">Online</font>  Bank</center></h1>
+
+    {% endblock %}
+
+
+
+
+<header class="hero-section">
+  <div class="hero-text-container">
+    <h1
+      >We provide<br />
+      Best banking services in Bangladesh</h1
+    >
+    <p>
+      You can take your financial life online. The online bank account<br />
+      will be a one-stop-shop for spending,saving,<br />budgeting,investing,
+      and much more.</p>
+    
+    
+  </div>
+  <div class="hero-img-container">
+    <!---->
+    <img src="{{url_for('static', filename='images/bank_system.jpg')}}" align="middle" />
+    
+  </div>
+</header>
+<div class="container">
+  <section class="why-us">
+    <h1>About us</h1>
+    <div>
+    <img src="{{url_for('static', filename='images/money.jpg')}}"  />
+    </div>
+    <p
+      >The online bank is one of the world's leading financial institutions,<br /> serving individuals, small- and middle-market businesses, large corporations,<br /> and governments with a full range of banking,<br /> investment management and other financial and risk management products and services.<br /> Our products and services are very organized<br />Control your finances like never before.</p
+    >
+  </section>
+  <section class="features-section">
+    <div class="feature-item">
+      <img src="{{url_for('static', filename='images/icon-online.svg')}}"  />
+
+      <h1>Our  </br>services</h1>
+      <p
+        >Our modern website <br />
+        allow you to get,withdraw or transfer<br />
+        money <br />
+        from our website</p
+      >
+    </div>
+    <div class="feature-item">
+      <img src="{{url_for('static', filename='images/icon-budgeting.svg')}}"  />
+     
+      <h1>We are trust worthy</br></h1>
+      <p>
+       You can see where your money<br />
+        goes every month.We send <br />
+        notifications in your gmail accounnt when you're close to<br />
+        hitting your limits 
+      </p></div>
+    
+
+    <div class="feature-item">
+      <img src="{{url_for('static', filename='images/icon-onboarding.svg')}}"  />
+      
+      <h1>We are fast</h1>
+      <p
+        >Our services are very fast <br />
+        Customers do not need to wait for many times<br />
+        Our employees are very organized<br />
+        </p
+      >
+    </div>
+    <div class="feature-item">
+      <img src="{{url_for('static', filename='images/icon-api.svg')}}"  />
+      
+      
+      <h1> API</h1>
+      <p
+        >You can Manage your savings, investments,<br />
+        pension and much more from one<br />
+        account.Tracking your money has<br />
+        never been easier</p
+      >
+    </div>
+  </section>
+  <section class="blog-section">
+    <h1>Read  feature writing</h1>
+    <div class="article-container">
+      <div class="article">
+        <img src="{{url_for('static', filename='images/image-currency.jpg')}}"  />
+        
+        <div class="content">
+          <p></p>
+          <h4
+            >Get money in any type of<br />
+            currency </h4
+          >
+          <p
+            >The world is getting digitalised and<br />
+            we are becoming more modern.So,<br />
+            why would you be forced to <br />
+            get money in a same currency...</p
+          >
+        </div>
+      </div>
+      <div class="article">
+        <img src="{{url_for('static', filename='images/restuarant.jpg')}}"  />
+        
+        <div class="content">
+          <p></p>
+          <h4
+            >Save your money<br />
+            </h4
+          >
+          <p
+            >Easy budgeting system<br />
+            allow you to seperate out your<br />
+            spending and set realistic limits<br />
+            each years.So you can save...</p
+          >
+        </div>
+      </div>
+      <div class="article">
+        <img src="{{url_for('static', filename='images/plane.jpg')}}"  />
+        
+        
+        <div class="content">
+          <p></p>
+          <h4>Get Your online bank card<br /></h4>
+          <p
+            > you can enjoy your travels. by this card<br /> we don't
+            charge <br />fees on purchase while you're <br />abroad.We'll
+            show you...</p
+          >
+        </div>
+      </div>
+      <div class="article">
+        <img src="{{url_for('static', filename='images/travel.jpg')}}"  />
+        
+        <div class="content">
+          <p></p>
+          <h4>Opening<br />our new branch </h4>
+          <p
+            >By a lot of hardwork <br />
+            we're announce that we are about to launch<br />
+            our new branch.
+          
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="footer">
+  <div class="footer-container">
+    <div class="social-container">
+      <img src="{{url_for('static', filename='images/icon-facebook.svg')}}"  />
+      <img src="{{url_for('static', filename='images/icon-instagram.svg')}}"  />
+      <img src="{{url_for('static', filename='images/icon-twitter.svg')}}"  />
+      <img src="{{url_for('static', filename='images/icon-pinterest.svg')}}"  />
+      
+    </div>
+    <div class="menu">
+      
+      
+    </div>
+    <div class="menu">
+      <a href="#">Carriers</a>
+      <a href="#">Our Support</a>
+      <a href="#">Our Privacy Policy</a>
+    </div>
+    
+  </div>
+</footer>
+
+
+
+
+</body>
+
+
+  
+
+
+ 
+</html>  

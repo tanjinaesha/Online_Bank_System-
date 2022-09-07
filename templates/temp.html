@@ -1,0 +1,13 @@
+<h1>SignUp here</h1>
+<form method="POST">
+    <input type="text" name="username" placeholder="Enter name"><br><br>
+    <input type="email" name="email" placeholder="Enter your email" required><br><br>
+    <input type="password" name="password1" placeholder="Enter yor password" required>
+    <input type="submit" value="Submit">
+    <hr>
+    {% if messages %}
+    {% for mgs in messages %}
+    <p style="color:green;">{{mgs}}</p>
+    {% endfor %}
+    {% endif %}
+</form>

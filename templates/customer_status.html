@@ -1,0 +1,106 @@
+{% include "header.html"%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+  </head>
+  <body >
+ 
+    <br>
+    <div class="container" style="padding-top: 50px;color: black">
+      {% with msg = get_flashed_messages(with_categories=true) %}
+      {% if msg %}
+          {% for category, msgs in msg%}
+             <center><div class = "alert alert-{{ category }}">
+                  <p>{{ msgs }}</p>
+              </div>
+            </center> 
+          {% endfor %}
+      {% endif %}
+  {% endwith %}
+</div>
+
+
+    <h1 style="color: black;padding-top: 100px;"><center>Create Customer Details</center></h1>
+   <center>
+    <form class="pure-form pure-form-aligned" method="POST" >
+      <fieldset style="position: center">
+
+           <div class="pure-control-group" style="padding-right: 150px;">
+            
+             {{ form.hidden_tag() }}
+                
+                <p style="color: black;">    {{ form.search_query(size=15)  }}  
+                {% for error in form.search_query.errors %}
+                <span class="error-message">{{ error }}</span>
+               {% endfor %}
+              </p>
+    
+              
+              <p style="color: black;padding-left: 50px;"> {{ form.search() }}   </p>
+            </div>
+            <table class="table table-hover" style="color: black; border: 1px solid black; "  border='1|0' width="70%" >
+              <thead>
+              <tr style="background-color: #87CEEB; padding: 20px;">
+                  <th scope="col">Customer SSN ID</th>
+                  <th scope="col"> Name</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">View_Message</th>
+                  <th scope="col">Last_Updated_info</th>
+                  <th scope="col">Operations</th>
+                  <th scope="col">View Details</th>
+    
+              </tr>
+              </thead>
+        
+             
+       
+              {% for d in accs %}
+              <td scope=col style="text-align: center; padding: 10px;">{{ d["ssn_id"]}}</td>
+              <td  style="text-align: center;">{{ d["customer_name"]}}</td>
+              <td  style="text-align: center;">Active</td>
+              <td  style="text-align: center;">{{ d["message"] }}</td>
+              <td  style="text-align: center;">{{ d["datetime"] }}</td>
+              <td  style="text-align: center;"><a href="#">Refresh</a></td>
+              <td style="text-align: center;"><a href="#">View Details</a></td>
+              </tr>
+              {% endfor %}
+        
+
+
+          </table>
+                  
+    
+        </fieldset>
+      </center>
+    </form>
+  
+
+  </div>
+    
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="social-container">
+        <img src="{{url_for('static', filename='images/icon-facebook.svg')}}"  />
+        <img src="{{url_for('static', filename='images/icon-instagram.svg')}}"  />
+        <img src="{{url_for('static', filename='images/icon-twitter.svg')}}"  />
+        <img src="{{url_for('static', filename='images/icon-pinterest.svg')}}"  />
+        
+      </div>
+      <div class="menu">
+        
+      </div>
+      <div class="menu">
+        <a href="#">Carriers</a>
+        <a href="#">Support</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      
+    </div>
+  </footer>
+  
+
+  
+  </body>
+
+</html>

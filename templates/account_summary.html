@@ -1,0 +1,66 @@
+{% include "header.html"%}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+  </head>
+  <body >
+
+    <h1 style="color: black;padding-top: 100px;"><center>Account_Summary</center></h1>
+   <center>
+    <form class="pure-form pure-form-aligned" method="POST" >
+      <fieldset style="position: center">
+
+           <div class="pure-control-group" style="padding-right: 150px;">
+            
+             {{ form.hidden_tag() }}
+                
+                <p style="color: black;">   {{form.search_query.label}} {{ form.search_query(size=15)  }}  
+                {% for error in form.search_query.errors %}
+                <span class="error-message">{{ error }}</span>
+               {% endfor %}
+              </p>
+
+
+                    
+              <p style="color: black;padding-left: 50px;"> {{ form.search() }}   </p>
+            </div>
+            <table class="table table-hover" style="color: black; border: 1px solid black; "  border='1|0' width="70%" >
+              <thead>
+              <tr style="background-color: #87CEEB; padding: 20px;">
+                  <th scope="col">Transaction_ID</th>
+                  <th scope="col">Transaction_information</th>
+                  <th scope="col">Date</th>
+                  <th scope="col">Total_Amount</th>
+    
+              </tr>
+              </thead>
+              {% for d in acc  %}
+                  <td scope=col style="text-align: center; padding: 10px;">{{ d["id_no"]}}</td>
+                  <td  style="text-align: center;">{{ d["description"] }}</td>
+                  <td  style="text-align: center;">{{ d["datetime"] }}</td>
+                  <td  style="text-align: center;">{{ d["amount"] }}</td>
+              </tr>
+       
+                {% endfor %}
+            
+              
+          
+          
+    
+          </table>
+                  
+    
+        </fieldset>
+      </center>
+    </form>
+  
+
+  </div>
+  
+  
+   
+  
+  </body>
+
+</html>

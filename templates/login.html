@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  </head>
+  <body style="background: url('static/bank.jpg') ;   background-repeat: no-repeat;
+  background-size: cover;">
+    {% block content %}
+    <center>
+
+
+   <form class="pure-form pure-form-aligned" method="POST">
+    <fieldset style="position: center">
+      <h1 style="color: blue;padding-top: 100px;"><center> Login</center></h1>
+    <div class="pure-control-group">
+
+      {{form.hidden_tag()}}
+            <p style="color: blue;">{{form.username.label}} {{form.username(size=20)}} 
+            {% for error in form.username.errors %}
+            <span class="error-message">{{ error }}</span>
+           {% endfor %}
+         </p>
+          <p style="color: blue;">{{form.password.label}} {{form.password()}} 
+            {% for error in form.password.errors %}
+            <span class="error-message">{{ error }}</span>
+           {% endfor %}
+         </p>
+         
+           <p  class="btn btn-primary"> {{ form.submit() }} 
+           
+         
+        </div>
+       
+   
+       
+    </fieldset>
+  </center>
+</form>
+
+
+    
+    
+  
+
+   {% endblock %}
+  </body>
+ 
+</html>

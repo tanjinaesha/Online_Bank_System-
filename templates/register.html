@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<center>
+
+<div class="table1">
+    <h1 style="text-align: center;">Registration Form</h1>
+
+<form method=POST action="/register">
+    <input type="text" name="username" placeholder="Your username"> <br>
+    <input type="password" name="pass" placeholder="Your password"> <br>
+    <button type="submit">Register</button> <br>
+</form>
+
+</center>
+
+{% endblock %}
